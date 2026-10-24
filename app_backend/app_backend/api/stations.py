@@ -2,7 +2,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Query, Request
 
-from app_backend.schemas import BayAvailability, StationDetail, StationSummary
+from app_backend.app_backend.utils.schemas import BayAvailability, StationDetail, StationSummary
 from app_backend.services.stations import StationService
 
 

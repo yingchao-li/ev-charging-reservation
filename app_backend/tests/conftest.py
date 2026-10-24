@@ -9,7 +9,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from app_backend.adapters.base import EcuriousAdapter, ProviderError
-from app_backend.config import Settings
+from app_backend.app_backend.utils.config import Settings
 from app_backend.main import create_app
 
 

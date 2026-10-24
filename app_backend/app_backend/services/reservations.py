@@ -6,9 +6,9 @@ from datetime import timezone
 from typing import Any
 
 from app_backend.adapters.base import EcuriousAdapter
-from app_backend.database import Database, now_iso
-from app_backend.errors import conflict, forbidden, not_found
-from app_backend.schemas import ReservationCreate
+from app_backend.app_backend.utils.database import Database, now_iso
+from app_backend.app_backend.utils.errors import conflict, forbidden, not_found
+from app_backend.app_backend.utils.schemas import ReservationCreate
 
 
 RESERVATION_SELECT = """

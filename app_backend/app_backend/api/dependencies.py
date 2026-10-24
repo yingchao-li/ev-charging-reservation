@@ -6,7 +6,7 @@ from typing import Annotated
 from fastapi import Depends, Request
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 
-from app_backend.errors import AppError, forbidden
+from app_backend.app_backend.utils.errors import AppError, forbidden
 from app_backend.services.auth import AuthService
 
 

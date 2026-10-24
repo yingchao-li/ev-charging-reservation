@@ -5,8 +5,8 @@ import sqlite3
 from typing import Any
 
 from app_backend.adapters.base import EcuriousAdapter, ProviderError
-from app_backend.database import Database
-from app_backend.errors import not_found
+from app_backend.app_backend.utils.database import Database
+from app_backend.app_backend.utils.errors import not_found
 
 
 def availability_label(status: dict[str, Any] | None, supported: bool) -> str:

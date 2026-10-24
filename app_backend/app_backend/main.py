@@ -12,9 +12,9 @@ from fastapi.responses import JSONResponse
 from app_backend.adapters.base import EcuriousAdapter, ProviderError
 from app_backend.adapters.http_mock import HttpMockEcuriousAdapter
 from app_backend.api import admin, auth, reservations, stations, vehicles
-from app_backend.config import Settings
-from app_backend.database import Database
-from app_backend.errors import AppError
+from app_backend.app_backend.utils.config import Settings
+from app_backend.app_backend.utils.database import Database
+from app_backend.app_backend.utils.errors import AppError
 from app_backend.services.event_sync import EventSyncService
 
 

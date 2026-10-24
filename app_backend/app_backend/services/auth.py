@@ -5,11 +5,11 @@ import uuid
 from datetime import datetime, timedelta, timezone
 from typing import Any, Mapping
 
-from app_backend.config import Settings
-from app_backend.database import Database, now_iso
-from app_backend.errors import AppError, conflict
-from app_backend.schemas import LoginRequest, RegisterRequest
-from app_backend.security import hash_password, new_session_token, token_hash, verify_password
+from app_backend.app_backend.utils.config import Settings
+from app_backend.app_backend.utils.database import Database, now_iso
+from app_backend.app_backend.utils.errors import AppError, conflict
+from app_backend.app_backend.utils.schemas import LoginRequest, RegisterRequest
+from app_backend.app_backend.utils.security import hash_password, new_session_token, token_hash, verify_password
 
 
 def public_user(row: Mapping[str, Any]) -> dict[str, Any]:

@@ -3,7 +3,7 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, Header, Request, status
 
 from app_backend.api.dependencies import current_user
-from app_backend.schemas import ReservationCreate, ReservationView
+from app_backend.app_backend.utils.schemas import ReservationCreate, ReservationView
 from app_backend.services.reservations import ReservationService
 
 

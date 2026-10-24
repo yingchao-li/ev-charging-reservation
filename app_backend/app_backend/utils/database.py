@@ -8,8 +8,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterator
 
-from app_backend.config import Settings
-from app_backend.security import hash_password
+from app_backend.app_backend.utils.config import Settings
+from app_backend.app_backend.utils.security import hash_password
 
 
 SCHEMA = """

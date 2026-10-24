@@ -4,9 +4,9 @@ import sqlite3
 import uuid
 from typing import Any
 
-from app_backend.database import Database, now_iso
-from app_backend.errors import conflict, not_found
-from app_backend.schemas import VehicleCreate, VehicleUpdate
+from app_backend.app_backend.utils.database import Database, now_iso
+from app_backend.app_backend.utils.errors import conflict, not_found
+from app_backend.app_backend.utils.schemas import VehicleCreate, VehicleUpdate
 
 
 def vehicle_view(row: sqlite3.Row) -> dict[str, Any]:

@@ -3,7 +3,7 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, status
 
 from app_backend.api.dependencies import auth_service, current_user, raw_token
-from app_backend.schemas import AuthResponse, LoginRequest, Message, RegisterRequest, User
+from app_backend.app_backend.utils.schemas import AuthResponse, LoginRequest, Message, RegisterRequest, User
 from app_backend.services.auth import AuthService, public_user
 
 

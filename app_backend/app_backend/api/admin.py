@@ -5,8 +5,8 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, Query, Request
 
 from app_backend.api.dependencies import admin_user
-from app_backend.database import now_iso
-from app_backend.schemas import (
+from app_backend.app_backend.utils.database import now_iso
+from app_backend.app_backend.utils.schemas import (
     AdminEvent,
     AlertAcknowledge,
     AlertView,
@@ -111,7 +111,7 @@ async def demo_occupancy(payload: DemoOccupancyRequest, request: Request):
 @router.post("/demo/reservations/{reservation_id}/charging/{action}")
 async def demo_charging(reservation_id: str, action: str, request: Request):
     if action not in {"start", "stop"}:
-        from app_backend.errors import AppError
+        from app_backend.app_backend.utils.errors import AppError
 
         raise AppError(422, "INVALID_ACTION", "action must be start or stop")
     reservation = reservation_service(request).get(reservation_id, "", "ADMIN")
